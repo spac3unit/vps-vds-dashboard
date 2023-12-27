@@ -1,5 +1,5 @@
 "use client"
-import { Title, Input, Text, Stack, UnstyledButton } from '@mantine/core';
+import { Title, Input, Text, Stack, Group, Divider, Button } from '@mantine/core';
 import { em, rem } from '@mantine/core';
 import { LocationPicker } from '@/components/location-picker';
 import { TariffPicker } from '@/components/tariff-picker';
@@ -40,6 +40,28 @@ export default function MainPage() {
         <Title order={2}>Выбор периода оплаты и оформление заказа</Title>
         <TariffDurationPicker />
       </Stack>
+
+      <Divider />
+
+      <Group w='100%' p='sm' justify='space-between'>
+        <Stack>
+          <Title order={3}>Итого</Title>
+          <Text >VPS-Medium x 1шт</Text>
+          <Text >Датацентр: Казань</Text>
+          <Text >ОС: Ubuntu 20.04</Text>
+          <Text >Срок: 3 месяца</Text>
+        </Stack>
+        <Stack align='end' miw={180}>
+          <Text size="xl" fw={700}>53,22 €</Text>
+          <Button
+            fullWidth
+            variant="gradient"
+            gradient={{ from: 'blue', to: 'cyan', deg: 90 }}
+          >
+            Оплатить
+          </Button>
+        </Stack>
+      </Group>
     </div>
   )
 }
