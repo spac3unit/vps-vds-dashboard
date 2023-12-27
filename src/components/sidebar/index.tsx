@@ -25,7 +25,7 @@ const data = [
     { link: '', label: 'Настройки', icon: IconSettings },
 ];
 
-export default function Sidebar() {
+export function Sidebar() {
     const [active, setActive] = useState('Billing');
 
     const links = data.map((item) => (

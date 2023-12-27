@@ -1,8 +1,8 @@
 "use client"
-import { AppShell, Burger, Group, Skeleton } from '@mantine/core';
+import { AppShell, Burger, Group, Flex } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import Sidebar from '@/components/sidebar';
-
+import { Sidebar } from '@/components/sidebar';
+import { AvatarMenu } from '@/components/avatar-menu';
 
 export default function Shell({ children }: any) {
     const [opened, { toggle }] = useDisclosure();
@@ -13,8 +13,15 @@ export default function Shell({ children }: any) {
             padding="md"
         >
             <AppShell.Header>
-                <Burger opened={opened} onClick={toggle} hiddenFrom="sm" />
-                vds-vps.com
+                <Flex justify="space-between" styles={{ root: { height: '100%', padding: '0 16px' } }}>
+                    <Group>
+                        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" />
+                        <div>vds-vps.com</div>
+                    </Group>
+
+                    <AvatarMenu />
+                </Flex>
+
             </AppShell.Header>
             <AppShell.Navbar p="md">
                 <Sidebar />

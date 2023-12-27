@@ -1,0 +1,64 @@
+.list::before {
+    border-style: none;
+}
+
+/* .tab:hover {
+    border-style: ;
+} */
+
+.list {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 12px;
+}
+
+/* 2 equal columns (dedicated, shared) */
+.list > * {
+  flex: 1;
+}
+.tab {
+    border: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-4));
+
+    &[data-active] {
+        z-index: 1;
+        background-color: var(--mantine-color-blue-filled);
+        border-color: var(--mantine-color-blue-filled);
+        color: var(--mantine-color-white);
+    
+        @mixin hover {
+          background-color: var(--mantine-color-blue-filled-hover);
+        }
+      }
+}
+
+.text {
+  white-space: unset
+}
+
+/* Tariff Item */
+
+.tariffItemTab {
+  
+  &[data-active] {
+    z-index: 1;
+    background-color: var(--mantine-color-gray-2);
+    border-color: var(--mantine-color-blue-filled);
+    color: var(--mantine-color-black);
+
+    @mixin hover {
+      background-color: var(--mantine-color-gray-2);
+    }
+  }
+}
+
+.tariffItemTabLabel {
+  width: 100%;
+}
+
+.tariffItemTabList {
+  
+    display: flex;
+    flex-wrap: nowrap;
+    /* margin-bottom: 30px; */
+ 
+}
